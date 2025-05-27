@@ -131,6 +131,35 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .calculator-section {
+      background-color: #fff;
+      color: #000;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .calculator-section input {
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .calculator-section .result {
+      font-size: 20px;
+      margin-top: 20px;
+      color: #001F3F;
+      font-weight: bold;
+    }
+    .calculator-section .apply-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -147,6 +176,16 @@
       <input type="text" name="name" placeholder="Ф.И.О" required><br>
       <button type="submit">Отправить заявку</button>
     </form>
+  </section>
+
+  <section class="calculator-section">
+    <h2>Калькулятор кредита</h2>
+    <label for="amount">Сумма кредита (до 20 000 000 ₸):</label><br>
+    <input type="number" id="amount" min="100000" max="20000000" value="2000000"><br>
+    <label for="years">Срок кредита (1–10 лет):</label><br>
+    <input type="number" id="years" min="1" max="10" value="3"><br>
+    <div class="result" id="paymentResult">≈ Ежемесячный платёж: —</div>
+    <a href="https://t.me/onlinecreditttkz" target="_blank" class="apply-button">💬 Оформить кредит</a>
   </section>
 
   <section class="info-section">
@@ -167,10 +206,10 @@
   <section class="video-section">
     <h2>Отзывы клиентов</h2>
     <div class="video-grid">
-<video controls poster="poster1.jpg"><source src="video1.mp4" type="video/mp4"></video>
-<video controls poster="poster2.jpg"><source src="video2.mp4" type="video/mp4"></video>
-<video controls poster="poster3.jpg"><source src="video3.mp4" type="video/mp4"></video>
-<video controls poster="poster4.jpg"><source src="video4.mp4" type="video/mp4"></video>
+      <video controls poster="poster1.jpg"><source src="video1.mp4" type="video/mp4"></video>
+      <video controls poster="poster2.jpg"><source src="video2.mp4" type="video/mp4"></video>
+      <video controls poster="poster3.jpg"><source src="video3.mp4" type="video/mp4"></video>
+      <video controls poster="poster4.jpg"><source src="video4.mp4" type="video/mp4"></video>
     </div>
   </section>
 
@@ -203,5 +242,22 @@
     <p>г. Алматы, проспект Назарбаева 15</p>
     <p>🔒 Ваши данные защищены SSL-шифрованием</p>
   </footer>
+
+  <script>
+    function calculatePayment() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const years = parseInt(document.getElementById('years').value);
+      const rate = 0.02;
+      if (!amount || !years) return;
+      const months = years * 12;
+      const monthlyRate = rate / 12;
+      const monthlyPayment = amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months));
+      document.getElementById('paymentResult').textContent =
+        `≈ Ежемесячный платёж: ${monthlyPayment.toFixed(0).toLocaleString('ru-RU')} ₸`;
+    }
+    document.getElementById('amount').addEventListener('input', calculatePayment);
+    document.getElementById('years').addEventListener('input', calculatePayment);
+    window.onload = calculatePayment;
+  </script>
 </body>
 </html>
