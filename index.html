@@ -2,206 +2,77 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>goldCredit</title>
+  <title>GoldCredit</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #001F3F, #F7C948);
-      color: #fff;
-    }
-    header {
-      background-color: #001F3F;
-      padding: 50px 20px 30px;
-      text-align: center;
-    }
-    header img {
-      height: 200px;
+    body { margin: 0; font-family: Arial, sans-serif; background-color: #f9f9f9; color: #333; }
+    header, footer { background-color: #001F3F; color: #fff; text-align: center; padding: 20px; }
+    section { padding: 40px 20px; }
+    .calculator { background-color: #fff; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .calculator h2 { text-align: center; color: #001F3F; }
+    .calculator label { display: block; margin: 15px 0 5px; font-weight: bold; }
+    .calculator input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    .result { text-align: center; margin-top: 20px; font-size: 20px; color: #001F3F; font-weight: bold; }
+    .apply-button {
       display: block;
-      margin: 0 auto 5px;
-    }
-    header h2 {
-      font-size: 24px;
-      font-weight: bold;
-      color: #FFD700;
-      margin: 5px auto 0;
-    }
-    header p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: 5px auto 0;
-      color: #ffffff;
-    }
-    .form-section, .video-section {
-      background-color: #fff;
-      color: #000;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .form-section input {
-      padding: 10px;
-      margin: 10px;
-      width: 250px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .form-section button {
-      padding: 10px 25px;
-      background-color: #001F3F;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .info-section {
-      background-color: #F7C948;
-      color: #000;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .info-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      padding: 20px;
-      max-width: 300px;
-      flex: 1;
-    }
-    .faq-section {
-      background-color: #001F3F;
-      padding: 40px 20px;
-      color: white;
-    }
-    .faq-section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .faq-section .faq-item {
-      margin-bottom: 20px;
-    }
-    .faq-section .faq-item h3 {
-      margin: 0 0 10px;
-      color: gold;
-    }
-    .video-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .video-grid video {
-      width: 300px;
-      height: 180px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    .footer {
-      background-color: #001F3F;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    .trust-section {
-      background-color: #ffffff;
-      color: #000;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .trust-section h2 {
-      color: #001F3F;
-      margin-bottom: 20px;
-    }
-    .trust-section p {
-      max-width: 600px;
-      margin: 0 auto 10px;
-      line-height: 1.6;
-    }
-    .contact-button {
-      display: inline-block;
-      margin-top: 20px;
+      margin: 30px auto 0;
       padding: 12px 24px;
       background-color: #25D366;
       color: white;
+      border: none;
       border-radius: 8px;
-      text-decoration: none;
+      font-size: 16px;
       font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      width: fit-content;
     }
+    .apply-button:hover { background-color: #1fae56; cursor: pointer; }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="goldCredit логотип">
-    <h2>Мы одобрим кредит, пока другие вам отказывают.</h2>
-    <p>Онлайн-заявка за 2 минуты, ставка от 2% годовых.</p>
+    <h1>GoldCredit</h1>
+    <p>Официальная финансовая организация, лицензированная в Республике Казахстан</p>
   </header>
 
-  <section class="form-section">
-    <h2>Заполните заявку</h2>
-    <form action="https://t.me/onlinecreditttkz">
-      <input type="text" name="iin" placeholder="ИИН" required><br>
-      <input type="text" name="name" placeholder="Ф.И.О" required><br>
-      <button type="submit">Отправить заявку</button>
-    </form>
-  </section>
+  <section>
+    <div class="calculator">
+      <h2>Калькулятор кредита</h2>
+      <label for="amount">Сумма кредита (до 20 000 000 ₸):</label>
+      <input type="number" id="amount" min="100000" max="20000000" value="2000000">
 
-  <section class="info-section">
-    <div class="info-card">
-      <h3>Одобрение от 15 минут</h3>
-      <p>Получите предварительное решение по кредиту за 15–30 минут.</p>
-    </div>
-    <div class="info-card">
-      <h3>До 20 000 000 ₸</h3>
-      <p>Сумма кредита до 20 млн ₸. Без справки о доходах.</p>
-    </div>
-    <div class="info-card">
-      <h3>0% для пенсионеров</h3>
-      <p>Специальные условия – кредит под 0%</p>
+      <label for="years">Срок кредита (1–10 лет):</label>
+      <input type="number" id="years" min="1" max="10" value="3">
+
+      <div class="result" id="paymentResult">≈ Ежемесячный платёж: —</div>
+
+      <a href="https://t.me/onlinecreditttkz" target="_blank" class="apply-button">💬 Оформить кредит</a>
     </div>
   </section>
 
-  <section class="video-section">
-    <h2>Отзывы клиентов</h2>
-    <div class="video-grid">
-<video controls poster="poster1.jpg"><source src="video1.mp4" type="video/mp4"></video>
-<video controls poster="poster2.jpg"><source src="video2.mp4" type="video/mp4"></video>
-<video controls poster="poster3.jpg"><source src="video3.mp4" type="video/mp4"></video>
-<video controls poster="poster4.jpg"><source src="video4.mp4" type="video/mp4"></video>
-    </div>
-  </section>
-
-  <section class="faq-section">
-    <h2>Часто задаваемые вопросы</h2>
-    <div class="faq-item">
-      <h3>Какие документы нужны для оформления?</h3>
-      <p>Достаточно ИИН и удостоверения личности. Никаких справок.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Как быстро придёт одобрение?</h3>
-      <p>В течение 15–30 минут после заполнения заявки.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Нужна ли предоплата?</h3>
-      <p>Нет. Вы оплачиваете только страховку при одобрении, по закону.</p>
-    </div>
-  </section>
-
-  <section class="trust-section">
-    <h2>О компании</h2>
-    <p>Мы — официально зарегистрированная финансовая организация, предоставляющая кредиты гражданам Казахстана с 2020 года.</p>
-    <p>На нашем счету более 10 000 довольных клиентов и тысячи успешно закрытых заявок. Работаем честно, быстро и безопасно.</p>
-    <p><strong>Лицензия №001 от 2024 г. | БИН: 123456789000 | ТОО «GOLDCREDIT»</strong></p>
-    <a href="https://t.me/onlinecreditttkz" target="_blank" class="contact-button">💬 Задать вопрос в Telegram</a>
-  </section>
-
-  <footer class="footer">
-    <p>© 2025 goldCredit. Все права защищены.</p>
-    <p>г. Алматы, проспект Назарбаева 15</p>
-    <p>🔒 Ваши данные защищены SSL-шифрованием</p>
+  <footer>
+    <p>© 2025 GoldCredit. Все права защищены.</p>
   </footer>
+
+  <script>
+    function calculatePayment() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const years = parseInt(document.getElementById('years').value);
+      const rate = 0.02; // 2% годовых
+
+      if (!amount || !years) return;
+
+      const months = years * 12;
+      const monthlyRate = rate / 12;
+      const monthlyPayment = amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months));
+
+      document.getElementById('paymentResult').textContent =
+        `≈ Ежемесячный платёж: ${monthlyPayment.toFixed(0).toLocaleString('ru-RU')} ₸`;
+    }
+
+    document.getElementById('amount').addEventListener('input', calculatePayment);
+    document.getElementById('years').addEventListener('input', calculatePayment);
+    window.onload = calculatePayment;
+  </script>
 </body>
 </html>
