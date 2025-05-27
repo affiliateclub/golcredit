@@ -16,16 +16,24 @@
       padding: 50px 20px 30px;
       text-align: center;
     }
-    header h1 {
-      font-size: 40px;
-      margin: 0;
-      color: gold;
+    header img {
+      height: 200px;
+      display: block;
+      margin: 0 auto 5px;
+    }
+    header h2 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #FFD700;
+      margin: 5px auto 0;
     }
     header p {
       font-size: 20px;
-      margin-top: 10px;
+      max-width: 600px;
+      margin: 5px auto 0;
+      color: #ffffff;
     }
-    .form-section {
+    .form-section, .video-section {
       background-color: #fff;
       color: #000;
       padding: 40px 20px;
@@ -79,16 +87,6 @@
       margin: 0 0 10px;
       color: gold;
     }
-    .video-section {
-      background-color: #fff;
-      color: #000;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .video-section h2 {
-      color: #001F3F;
-      margin-bottom: 30px;
-    }
     .video-grid {
       display: flex;
       flex-wrap: wrap;
@@ -101,18 +99,47 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
+    .footer {
+      background-color: #001F3F;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .trust-section {
+      background-color: #ffffff;
+      color: #000;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .trust-section h2 {
+      color: #001F3F;
+      margin-bottom: 20px;
+    }
+    .trust-section p {
+      max-width: 600px;
+      margin: 0 auto 10px;
+      line-height: 1.6;
+    }
+    .contact-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-<header>
-  <img src="logo.png" alt="goldCredit логотип" style="height: 200px; display: block; margin: 0 auto 5px;">
-  <h2 style="font-size: 24px; font-weight: bold; color: #FFD700; margin: 5px auto 0;">
-    Мы одобрим кредит, пока другие вам отказывают.
-  </h2>
-  <p style="font-size: 20px; max-width: 600px; margin: 5px auto 0; color: #ffffff;">
-    Онлайн-заявка за 2 минуты, ставка от 2% годовых.
-  </p>
-</header>
+  <header>
+    <img src="logo.png" alt="goldCredit логотип">
+    <h2>Мы одобрим кредит, пока другие вам отказывают.</h2>
+    <p>Онлайн-заявка за 2 минуты, ставка от 2% годовых.</p>
+  </header>
+
   <section class="form-section">
     <h2>Заполните заявку</h2>
     <form action="https://t.me/onlinecreditttkz">
@@ -140,22 +167,10 @@
   <section class="video-section">
     <h2>Отзывы клиентов</h2>
     <div class="video-grid">
-      <video controls>
-        <source src="video1.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>
-      <video controls>
-        <source src="video2.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>
-      <video controls>
-        <source src="video3.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>
-      <video controls>
-        <source src="video4.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-      </video>
+      <video controls><source src="video1.mp4" type="video/mp4"></video>
+      <video controls><source src="video2.mp4" type="video/mp4"></video>
+      <video controls><source src="video3.mp4" type="video/mp4"></video>
+      <video controls><source src="video4.mp4" type="video/mp4"></video>
     </div>
   </section>
 
@@ -174,5 +189,19 @@
       <p>Нет. Вы оплачиваете только страховку при одобрении, по закону.</p>
     </div>
   </section>
+
+  <section class="trust-section">
+    <h2>О компании</h2>
+    <p>Мы — официально зарегистрированная финансовая организация, предоставляющая кредиты гражданам Казахстана с 2020 года.</p>
+    <p>На нашем счету более 10 000 довольных клиентов и тысячи успешно закрытых заявок. Работаем честно, быстро и безопасно.</p>
+    <p><strong>Лицензия №001 от 2024 г. | БИН: 123456789000 | ТОО «GOLDCREDIT»</strong></p>
+    <a href="https://t.me/onlinecreditttkz" target="_blank" class="contact-button">💬 Задать вопрос в Telegram</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 goldCredit. Все права защищены.</p>
+    <p>г. Алматы, проспект Назарбаева 15</p>
+    <p>🔒 Ваши данные защищены SSL-шифрованием</p>
+  </footer>
 </body>
 </html>
